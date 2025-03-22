@@ -1,0 +1,531 @@
+/* styles.css */
+
+/* Google Font Import (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- General Styles --- */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Header Styles --- */
+header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+.header-title {
+    font-size: 2rem;  /* Increased size */
+    font-weight: 700;  /* Bolder */
+    color: #2a4365;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Increased letter spacing */
+    transition: color 0.3s ease;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);  /* Subtle text shadow */
+
+}
+
+/* Header Controls (Language & Dark Mode) */
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+.language-select {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #f9fafb;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.dark-mode-toggle {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+     transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.dark-mode-toggle:hover {
+    background-color: #357ebd;
+}
+
+/* --- Main Content --- */
+.main-content {
+  flex: 1;  /* Grow to fill available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem; /* More padding */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* --- Form Styles --- */
+.form-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+      transition: color 0.3s ease;
+}
+
+.checkbox-group label{
+    display: flex;
+    align-items: center;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9fafb;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #90cdf4;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    vertical-align: middle;
+}
+
+.form-group input[type="checkbox"]:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.form-group input[type="checkbox"]:checked::before {
+    content: '\2713';
+    display: block;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 14px;
+}
+ .error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+/* --- Result Styles --- */
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+.calculate-btn {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    flex: 1;  /* Make buttons take up equal space */
+}
+
+.calculate-btn:hover {
+    background-color: #357ebd;
+}
+/* Style Reset button like calculate, change color */
+.reset-btn {
+    background-color: #718096; /* Gray*/
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    flex: 1;  /*  Make buttons take up equal space */
+}
+
+.reset-btn:hover {
+    background-color: #4a5568;  /* Darker gray */
+}
+/*Report section*/
+.result-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+     opacity: 0; /* Initially hidden */
+    transform: translateY(20px);  /* Start slightly below */
+     transition: opacity 0.8s ease, transform 0.8s ease, background-color 0.3s;
+}
+
+.result-container.visible {
+   opacity: 1; /* Fade in */
+    transform: translateY(0);
+}
+
+.result-summary {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.result-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2a4365;
+    margin-bottom: 0.5rem;
+     transition: color 0.3s ease;
+}
+
+.result-level {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4a90e2;
+    margin-bottom: 0.25rem;
+      transition: color 0.3s ease;
+}
+
+.result-index {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.result-percentile, .result-time-wealth { /* Style  time wealth result */
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* --- Chart Styles --- */
+.chart-container {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+     transition: background-color 0.3s; /*For dark mode */
+}
+/* --- Report Styles --- */
+.report-container {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 1.5rem;
+     transition: background-color 0.3s ease;
+}
+
+.report-section {
+    margin-bottom: 1.5rem;
+}
+
+.report-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+/*Remove the table display*/
+/*.report-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-section table,
+.report-section th,
+.report-section td {
+    border: 1px solid #e2e8f0;
+}
+
+.report-section th,
+.report-section td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.report-section th {
+    background-color: #f9fafb;
+    font-weight: 500;
+}*/
+
+
+/* Mobile-First Report Item Styling */
+.report-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e2e8f0; /* subtle lines*/
+}
+
+.report-item-label {
+    font-weight: 500;
+    color: #4a5568;
+     margin-bottom: 0.25rem; /* Space */
+}
+
+.report-item-value {
+    color: #333;
+}
+
+/* --- Accordion Styles --- */
+.accordion-section {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.accordion-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.accordion-content {
+    padding: 0 1rem;
+}
+
+/* --- Spinner Styles --- */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #4a90e2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: #e2e8f0;
+    color: #555;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+     margin-top: auto; /* Push footer to bottom */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+  .header-controls {
+        margin-top: 0.5rem;
+    }
+     .logo{
+         margin-right: 0; /* Remove margin*/
+        margin-bottom: 10px; /* Add space  */
+    }
+    .form-container,
+    .result-container {
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+   .main-content{
+         padding: 60px 1rem 2rem;
+    }
+
+     .report-item {
+        display: flex;
+        flex-direction: column; /* Stack label and value vertically */
+         border-bottom: 1px solid #e2e8f0;
+        padding: 0.5rem 0; /* Add vertical padding */
+
+    }
+      /* label and value on separate lines */
+     .report-item-label {
+        margin-bottom: 0.25rem; /* Add space between*/
+    }
+
+      .chart-container{
+        padding: 0.5rem; /*Reduce padding */
+    }
+
+}
+/* --- Dark Mode Styles --- */
+.dark-mode {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+.dark-mode header {
+    background-color: #2d3748;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+/* Style dark mode texts */
+.dark-mode .header-title,
+.dark-mode .result-title,
+.dark-mode .accordion-title,
+.dark-mode .report-section h4,
+.dark-mode .form-group label,
+.dark-mode .result-level,
+ .dark-mode .result-index,
+ .dark-mode .result-percentile,
+ .dark-mode .report-item-label{
+     color: #edf2f7;
+}
+
+/* set backgrounds to Dark Mode*/
+.dark-mode .form-container,
+.dark-mode .result-container,
+.dark-mode .report-container,
+.dark-mode .chart-container
+{
+    background-color: #2d3748; /* Darker background */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+/* inputs */
+.dark-mode .form-group input[type="text"],
+.dark-mode .form-group input[type="number"],
+.dark-mode .form-group select,
+.dark-mode .language-select{
+      background-color: #4a5568; /* Dark input backgrounds */
+    border-color: #718096; /* Lighter border color */
+    color: #edf2f7;
+}
+
+.dark-mode .form-group input[type="text"]:focus,
+.dark-mode .form-group input[type="number"]:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .language-select:focus {
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2); /* Focus with Lighter shadow */
+}
+
+ .dark-mode .form-group input[type="checkbox"] {
+    border: 2px solid  #90cdf4;
+}
+
+.dark-mode .form-group input[type="checkbox"]:checked {
+   background-color: #4299e1;
+    border-color:  #4299e1;
+}
+.dark-mode .calculate-btn {
+     background-color: #4299e1;
+    color: #fff;
+}
+ .dark-mode  .calculate-btn:hover {
+    background-color: #3182ce;  /* Slightly darker on hover */
+}
+/* Style the reset button for dark mode as well*/
+ .dark-mode .reset-btn{
+    background-color: #4a5568;
+
+ }
+ .dark-mode .reset-btn:hover{
+      background-color: #718096;
+ }
+.dark-mode .error-message{
+      color: #fc8181; /* Light red color*/
+}
+
+/*Footer  */
+.dark-mode footer{
+    background-color: #4a5568;
+}
+ .dark-mode .report-item-value{
+    color: #e2e8f0;
+}
