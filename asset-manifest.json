@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/WealthMeter/static/css/main.9aa7990a.css",
+    "main.js": "/WealthMeter/static/js/main.71cb2d65.js",
+    "static/js/453.386c7ba9.chunk.js": "/WealthMeter/static/js/453.386c7ba9.chunk.js",
+    "static/media/wealthmeter-logo.png": "/WealthMeter/static/media/wealthmeter-logo.e28374e3e279dfcf3b65.png",
+    "index.html": "/WealthMeter/index.html",
+    "main.9aa7990a.css.map": "/WealthMeter/static/css/main.9aa7990a.css.map",
+    "main.71cb2d65.js.map": "/WealthMeter/static/js/main.71cb2d65.js.map",
+    "453.386c7ba9.chunk.js.map": "/WealthMeter/static/js/453.386c7ba9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9aa7990a.css",
+    "static/js/main.71cb2d65.js"
+  ]
+}
